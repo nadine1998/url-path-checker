@@ -1,0 +1,7 @@
+Rapport de Vulnérabilités
+
+Liste des Vulnérabilités :
+
+- Route trouvée: http://challenge01.root-me.org/web-serveur/ch4/admin
+- Route trouvée: http://challenge01.root-me.org/web-serveur/ch4/admin/backup/
+- Route trouvée: http://challenge01.root-me.org/web-serveur/ch4/admin
