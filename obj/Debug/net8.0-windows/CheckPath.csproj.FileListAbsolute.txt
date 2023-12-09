@@ -14,3 +14,4 @@ C:\Users\PC\source\repos\CheckPath\CheckPath\obj\Debug\net8.0-windows\refint\Che
 C:\Users\PC\source\repos\CheckPath\CheckPath\obj\Debug\net8.0-windows\CheckPath.pdb
 C:\Users\PC\source\repos\CheckPath\CheckPath\obj\Debug\net8.0-windows\CheckPath.genruntimeconfig.cache
 C:\Users\PC\source\repos\CheckPath\CheckPath\obj\Debug\net8.0-windows\ref\CheckPath.dll
+C:\Users\PC\source\repos\CheckPath\CheckPath\obj\Debug\net8.0-windows\CheckPath.sourcelink.json
