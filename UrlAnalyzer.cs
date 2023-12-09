@@ -19,13 +19,55 @@ namespace CheckPath
             var vulnerabilities = new List<string>();
             int taille = words.Count;
             listeVulBox.Items.Clear();
-            url = url[url.Length - 1].Equals('/') ? url : url + '/';
 
-            if (IsValidUrl(url) == false)
+
+            if (!IsValidUrl(url))
             {
                 MessageBox.Show("URL invalide. Réessayez s'il vous plait", "Attention");
                 return null;
             }
+            // Effectuer une requête vers le site racine
+            try
+            {
+                using (var rootResponse = await httpClient.GetAsync(url))
+                {
+                    if (!rootResponse.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show($"La requête vers le site racine {url} a échoué. le site n'éxiste pas .", "Attention");
+                        return vulnerabilities;
+                    }
+                    if ((int)rootResponse.StatusCode >= 300 && (int)rootResponse.StatusCode < 400)
+                    {
+                      
+                        var redirectLocation = rootResponse.Headers.Location?.AbsoluteUri;
+
+                        if (!string.IsNullOrEmpty(redirectLocation))
+                        {
+                     
+                            using (var redirectedResponse = await httpClient.GetAsync(redirectLocation))
+                            {
+                                if (redirectedResponse.IsSuccessStatusCode)
+                                {
+                                    MessageBox.Show($"Redirection vers : {redirectLocation}", "Redirection réussie");
+                                }
+                                else
+                                {
+                                    MessageBox.Show($"La requête vers l'emplacement de redirection {redirectLocation} a échoué. Aucune vulnérabilité trouvée.", "Attention");
+                                    return vulnerabilities;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (HttpRequestException e)
+            {
+                MessageBox.Show($"Erreur lors de la requête vers le site racine : {e.Message}", "Erreur");
+                return vulnerabilities;
+            }
+
+            url = url[url.Length - 1].Equals('/') ? url : url + '/';
+
             for (int i = 0; i < taille; i++)
             {
                 chargementLabel.Text = calculProgress(i, taille).ToString() + " %";
