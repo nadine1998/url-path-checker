@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace CheckPath
 {
-    internal class CsvUtils
+    internal class WordlistUtils
     {
-        public static List<string> ReadCsvFile(string filePath)
+        public static List<string> ReadWordListFile(string filePath)
         {
             var words = new List<string>();
             using (TextFieldParser parser = new TextFieldParser(filePath))
             {
                 parser.TextFieldType = FieldType.Delimited;
-                parser.SetDelimiters(",");
+                parser.SetDelimiters(" ");
                 while (!parser.EndOfData)
                 {
                     string[] fields = parser.ReadFields();

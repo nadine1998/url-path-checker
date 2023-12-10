@@ -20,7 +20,7 @@ namespace CheckPath
         };
 
         private string filePath = "";
-        private List<string> vulnerabilitiesList = new List<string>();
+        private List<Vulnerability> vulnerabilitiesList = new List<Vulnerability>();
         private bool analyzeFinished = false;
         public Form1()
         {
@@ -49,7 +49,7 @@ namespace CheckPath
         private void loadCsvButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "CSV Files|*.csv";
+            openFileDialog.Filter = "TXT Files|*.txt";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 filePath = openFileDialog.FileName;
@@ -62,7 +62,7 @@ namespace CheckPath
             {
                 //var words = ReadCsvFile(filePath);
                 analyzeFinished = false;
-                var words = CsvUtils.ReadCsvFile(filePath);
+                var words = WordlistUtils.ReadWordListFile(filePath);
                 vulnerabilitiesList = await UrlAnalyzer.AnalyzeUrl(this.urlTextBox.Text, words, this.listeVulBox, this.chargementLabel, this.routeLabel);
                 analyzeFinished = true;
             }
