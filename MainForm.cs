@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 
 namespace CheckPath
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private static readonly HttpClient httpClient = new HttpClient
         {
@@ -20,9 +20,9 @@ namespace CheckPath
         };
 
         private string filePath = "";
-        private List<Vulnerability> vulnerabilitiesList = new List<Vulnerability>();
+        private ListVulnerability listVulnerability = new ListVulnerability();
         private bool analyzeFinished = false;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -53,6 +53,7 @@ namespace CheckPath
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 filePath = openFileDialog.FileName;
+                this.worldlistLabel.Text = "Wordlist : " + filePath;
             }
         }
 
@@ -60,10 +61,9 @@ namespace CheckPath
         {
             if (!string.IsNullOrEmpty(filePath))
             {
-                //var words = ReadCsvFile(filePath);
                 analyzeFinished = false;
                 var words = WordlistUtils.ReadWordListFile(filePath);
-                vulnerabilitiesList = await UrlAnalyzer.AnalyzeUrl(this.urlTextBox.Text, words, this.listeVulBox, this.chargementLabel, this.routeLabel);
+                listVulnerability = await UrlAnalyzerUtils.AnalyzeUrl(this.urlTextBox.Text, words, this.listeVulBox, this.chargementLabel, this.routeLabel);
                 analyzeFinished = true;
             }
             else
@@ -79,7 +79,7 @@ namespace CheckPath
                 rapportFile.Filter = "TXT Files|*.txt";
                 rapportFile.Title = "Sauvegarder le rapport";
                 if(rapportFile.ShowDialog() == DialogResult.OK)
-                    RapportUtils.GenerateTextRepor1(rapportFile.FileName, vulnerabilitiesList);
+                    listVulnerability.GenerateTextReport(rapportFile.FileName);
             }
             else
             {

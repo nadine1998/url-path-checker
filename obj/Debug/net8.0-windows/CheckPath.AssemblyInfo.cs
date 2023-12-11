@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CheckPath")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c40d84143e0fbdd9f121c00aa9593a69b895ff1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+406aa24ca92f64ec52cd37080318e7a4af932363")]
 [assembly: System.Reflection.AssemblyProductAttribute("CheckPath")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CheckPath")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,6 @@
 ﻿namespace CheckPath
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -42,16 +42,18 @@
             menuStrip1 = new MenuStrip();
             menuToolStripMenuItem = new ToolStripMenuItem();
             chargerToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator2 = new ToolStripSeparator();
             analyserToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             quitterToolStripMenuItem = new ToolStripMenuItem();
-            toolStripSeparator2 = new ToolStripSeparator();
+            label4 = new Label();
+            worldlistLabel = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // urlTextBox
             // 
-            urlTextBox.Location = new Point(114, 41);
+            urlTextBox.Location = new Point(114, 77);
             urlTextBox.Name = "urlTextBox";
             urlTextBox.PlaceholderText = "Entrez URL";
             urlTextBox.Size = new Size(398, 27);
@@ -59,7 +61,7 @@
             // 
             // loadCsvButton
             // 
-            loadCsvButton.Location = new Point(563, 39);
+            loadCsvButton.Location = new Point(556, 75);
             loadCsvButton.Name = "loadCsvButton";
             loadCsvButton.Size = new Size(94, 29);
             loadCsvButton.TabIndex = 1;
@@ -69,7 +71,7 @@
             // 
             // analyzeButton
             // 
-            analyzeButton.Location = new Point(679, 39);
+            analyzeButton.Location = new Point(672, 75);
             analyzeButton.Name = "analyzeButton";
             analyzeButton.Size = new Size(94, 29);
             analyzeButton.TabIndex = 2;
@@ -79,7 +81,7 @@
             // 
             // rapportButton
             // 
-            rapportButton.Location = new Point(347, 397);
+            rapportButton.Location = new Point(347, 474);
             rapportButton.Name = "rapportButton";
             rapportButton.Size = new Size(174, 29);
             rapportButton.TabIndex = 3;
@@ -90,7 +92,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(114, 89);
+            label1.Location = new Point(114, 182);
             label1.Name = "label1";
             label1.Size = new Size(97, 20);
             label1.TabIndex = 4;
@@ -99,7 +101,7 @@
             // progessLabel
             // 
             progessLabel.AutoSize = true;
-            progessLabel.Location = new Point(237, 89);
+            progessLabel.Location = new Point(237, 182);
             progessLabel.Name = "progessLabel";
             progessLabel.Size = new Size(0, 20);
             progessLabel.TabIndex = 5;
@@ -107,7 +109,7 @@
             // chargementLabel
             // 
             chargementLabel.AutoSize = true;
-            chargementLabel.Location = new Point(217, 89);
+            chargementLabel.Location = new Point(217, 182);
             chargementLabel.Name = "chargementLabel";
             chargementLabel.Size = new Size(0, 23);
             chargementLabel.TabIndex = 7;
@@ -116,7 +118,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(114, 150);
+            label3.Location = new Point(114, 230);
             label3.Name = "label3";
             label3.Size = new Size(126, 20);
             label3.TabIndex = 8;
@@ -125,7 +127,7 @@
             // routeLabel
             // 
             routeLabel.AutoSize = true;
-            routeLabel.Location = new Point(268, 150);
+            routeLabel.Location = new Point(268, 230);
             routeLabel.Name = "routeLabel";
             routeLabel.Size = new Size(0, 20);
             routeLabel.TabIndex = 9;
@@ -134,16 +136,16 @@
             // 
             listeVulBox.FormattingEnabled = true;
             listeVulBox.HorizontalScrollbar = true;
-            listeVulBox.Location = new Point(114, 240);
+            listeVulBox.Location = new Point(114, 317);
             listeVulBox.Name = "listeVulBox";
             listeVulBox.ScrollAlwaysVisible = true;
-            listeVulBox.Size = new Size(543, 124);
+            listeVulBox.Size = new Size(652, 124);
             listeVulBox.TabIndex = 10;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(114, 217);
+            label2.Location = new Point(114, 294);
             label2.Name = "label2";
             label2.Size = new Size(179, 20);
             label2.TabIndex = 11;
@@ -156,7 +158,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.Size = new Size(902, 28);
             menuStrip1.TabIndex = 12;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -170,38 +172,58 @@
             // chargerToolStripMenuItem
             // 
             chargerToolStripMenuItem.Name = "chargerToolStripMenuItem";
-            chargerToolStripMenuItem.Size = new Size(224, 26);
+            chargerToolStripMenuItem.Size = new Size(148, 26);
             chargerToolStripMenuItem.Text = "Charger";
             chargerToolStripMenuItem.Click += chargerToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(145, 6);
             // 
             // analyserToolStripMenuItem
             // 
             analyserToolStripMenuItem.Name = "analyserToolStripMenuItem";
-            analyserToolStripMenuItem.Size = new Size(224, 26);
+            analyserToolStripMenuItem.Size = new Size(148, 26);
             analyserToolStripMenuItem.Text = "Analyser";
             analyserToolStripMenuItem.Click += analyserToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(221, 6);
+            toolStripSeparator1.Size = new Size(145, 6);
             // 
             // quitterToolStripMenuItem
             // 
             quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            quitterToolStripMenuItem.Size = new Size(224, 26);
+            quitterToolStripMenuItem.Size = new Size(148, 26);
             quitterToolStripMenuItem.Text = "Quitter";
             // 
-            // toolStripSeparator2
+            // label4
             // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(221, 6);
+            label4.AutoSize = true;
+            label4.Location = new Point(114, 44);
+            label4.Name = "label4";
+            label4.Size = new Size(35, 20);
+            label4.TabIndex = 13;
+            label4.Text = "Url :";
             // 
-            // Form1
+            // worldlistLabel
+            // 
+            worldlistLabel.AutoSize = true;
+            worldlistLabel.Location = new Point(114, 118);
+            worldlistLabel.Name = "worldlistLabel";
+            worldlistLabel.Size = new Size(106, 20);
+            worldlistLabel.TabIndex = 14;
+            worldlistLabel.Text = "WordList : vide";
+            // 
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(902, 543);
+            Controls.Add(worldlistLabel);
+            Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(listeVulBox);
             Controls.Add(routeLabel);
@@ -215,7 +237,7 @@
             Controls.Add(urlTextBox);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Name = "Form1";
+            Name = "MainForm";
             Text = "URL Vulnerability Checker";
             Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
@@ -226,7 +248,6 @@
 
         #endregion
         private Button loadCsvButton;
-        private Button analyzeButton;
         private Button rapportButton;
         public TextBox urlTextBox;
         private Label label1;
@@ -244,5 +265,8 @@
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem quitterToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator2;
+        private Label label4;
+        public Label worldlistLabel;
+        public Button analyzeButton;
     }
 }

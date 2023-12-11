@@ -3,7 +3,6 @@ C:\Users\PC\source\repos\CheckPath\CheckPath\bin\Debug\net8.0-windows\CheckPath.
 C:\Users\PC\source\repos\CheckPath\CheckPath\bin\Debug\net8.0-windows\CheckPath.runtimeconfig.json
 C:\Users\PC\source\repos\CheckPath\CheckPath\bin\Debug\net8.0-windows\CheckPath.dll
 C:\Users\PC\source\repos\CheckPath\CheckPath\bin\Debug\net8.0-windows\CheckPath.pdb
-C:\Users\PC\source\repos\CheckPath\CheckPath\obj\Debug\net8.0-windows\CheckPath.Form1.resources
 C:\Users\PC\source\repos\CheckPath\CheckPath\obj\Debug\net8.0-windows\CheckPath.csproj.GenerateResource.cache
 C:\Users\PC\source\repos\CheckPath\CheckPath\obj\Debug\net8.0-windows\CheckPath.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\PC\source\repos\CheckPath\CheckPath\obj\Debug\net8.0-windows\CheckPath.AssemblyInfoInputs.cache
@@ -15,3 +14,4 @@ C:\Users\PC\source\repos\CheckPath\CheckPath\obj\Debug\net8.0-windows\CheckPath.
 C:\Users\PC\source\repos\CheckPath\CheckPath\obj\Debug\net8.0-windows\CheckPath.genruntimeconfig.cache
 C:\Users\PC\source\repos\CheckPath\CheckPath\obj\Debug\net8.0-windows\ref\CheckPath.dll
 C:\Users\PC\source\repos\CheckPath\CheckPath\obj\Debug\net8.0-windows\CheckPath.sourcelink.json
+C:\Users\PC\source\repos\CheckPath\CheckPath\obj\Debug\net8.0-windows\CheckPath.MainForm.resources
